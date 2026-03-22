@@ -50,7 +50,7 @@ const App = () => {
         <div>
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-black text-blue-600 tracking-tighter">
-              MNR.
+              MR.
             </h2>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -91,8 +91,8 @@ const App = () => {
         <div className="space-y-4">
           {/* NEW: Download CV Button */}
           <a
-            href="resume.pdf"
-            download="resume.pdf"
+            href="Resume.pdf"
+            download="Resume.pdf"
             className="w-full py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all flex items-center justify-center gap-2 bg-blue-600 text-white shadow-lg hover:bg-blue-700 active:scale-95"
           >
             <svg
@@ -197,7 +197,7 @@ const App = () => {
                       href="tel:8200833141"
                       className="font-bold hover:text-blue-600 transition"
                     >
-                      8200833141
+                      8200833181
                     </a>
                   </div>
                 </div>
