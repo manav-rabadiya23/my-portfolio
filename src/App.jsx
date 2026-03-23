@@ -4,7 +4,6 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Your detailed personal data
   const personalData = {
     "Full Name": "Rabadiya Manavkumar Navinbhai",
     University: "CHARUSAT - CMPICA",
@@ -17,7 +16,7 @@ const App = () => {
   const skills = ["HTML", "CSS", "JS-Basic", "C", "C++"];
   const learning = ["PHP", "JavaScript"];
 
-  // 11 Coursera
+  // 11 Coursera + Others
   const certificates = [
     {
       title: "Advanced Networking, Virtualization, and Security",
@@ -67,7 +66,7 @@ const App = () => {
     {
       title: "Technical Support Fundamentals",
       org: "Coursera",
-      file: "/coursera9.pdf",
+      file: "coursera9.pdf",
     },
     {
       title: "Excel for Beginners",
@@ -184,7 +183,6 @@ const App = () => {
 
       {/* --- MAIN CONTENT AREA --- */}
       <main className="flex-1 lg:ml-72 p-6 md:p-16">
-        {/* HERO SECTION */}
         <header id="home" className="min-h-[70vh] flex flex-col justify-center">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="relative group">
@@ -244,7 +242,7 @@ const App = () => {
           </div>
         </header>
 
-        {/* --- PROFILE & SKILLS SECTION --- */}
+        {/* --- PROFILE SECTION --- */}
         <section
           id="profile"
           className="py-20 my-10 border-t border-slate-200/20"
@@ -328,7 +326,6 @@ const App = () => {
                 </div>
               </div>
 
-              {/* RESTORED SOCIAL BLOCKS */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div
                   className={`p-6 rounded-3xl border ${darkMode ? "bg-slate-800 border-slate-700" : "bg-white border-slate-100 shadow-lg"}`}
@@ -412,8 +409,9 @@ const App = () => {
                 <h3 className="font-bold text-lg mb-6 leading-tight h-12 overflow-hidden">
                   {cert.title}
                 </h3>
+                {/* --- ADDED #toolbar=0 AND ENCODING --- */}
                 <a
-                  href={cert.file}
+                  href={`/${encodeURIComponent(cert.file)}#toolbar=0`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center py-3 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-700 transition-all"
