@@ -78,6 +78,11 @@ const App = () => {
       org: "Coursera",
       file: "Generative AI for Everyone.pdf",
     },
+    {
+      title: "Smart India Hackathon-2025",
+      org: "Smart India Hackathon",
+      file: "sih.jpeg",
+    },
   ];
 
   return (
