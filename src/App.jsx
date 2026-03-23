@@ -17,9 +17,73 @@ const App = () => {
   const skills = ["HTML", "CSS", "JS-Basic", "C", "C++"];
   const learning = ["PHP", "JavaScript"];
 
+  // 11 Coursera
+  const certificates = [
+    {
+      title: "Advanced Networking, Virtualization, and Security",
+      org: "Coursera",
+      file: "Advanced Networking, Virtualization, and Security.pdf",
+    },
+    {
+      title: "Networking Fundamentals and Physical Networks",
+      org: "Coursera",
+      file: "Networking Fundamentals and Physical Networks.pdf",
+    },
+    {
+      title: "Blogging Course",
+      org: "Coursera",
+      file: "Blogging Course.pdf",
+    },
+    {
+      title: "Introduction to Social Media Marketing",
+      org: "Coursera",
+      file: "Introduction to Social Media Marketing.pdf",
+    },
+    {
+      title: "Introduction to Systems Analysis",
+      org: "Coursera",
+      file: "Introduction to Systems Analysis.pdf",
+    },
+    {
+      title: "Digital Product Management",
+      org: "Coursera",
+      file: "Digital Product Management -sad 2.pdf",
+    },
+    {
+      title: "HTML & CSS Crash Course",
+      org: "Coursera",
+      file: "HTML & CSS Crash Course.pdf",
+    },
+    {
+      title: "Introduction to HTML, CSS, & JavaScript",
+      org: "Coursera",
+      file: "Introduction to HTML, CSS, & JavaScript.pdf",
+    },
+    {
+      title: "Building Web Applications in PHP",
+      org: "Coursera",
+      file: "Building Web Applications in PHP.pdf",
+    },
+    {
+      title: "Technical Support Fundamentals",
+      org: "Coursera",
+      file: "/coursera9.pdf",
+    },
+    {
+      title: "Excel for Beginners",
+      org: "Coursera",
+      file: "Excel for Beginners.pdf",
+    },
+    {
+      title: "Generative AI for Everyone",
+      org: "Coursera",
+      file: "Generative AI for Everyone.pdf",
+    },
+  ];
+
   return (
     <div
-      className={`${darkMode ? "bg-slate-900 text-slate-100" : "bg-slate-50 text-slate-900"} min-h-screen flex transition-colors duration-500 font-sans`}
+      className={`${darkMode ? "bg-slate-900 text-slate-100" : "bg-slate-50 text-slate-900"} min-h-screen flex transition-colors duration-500 font-sans scroll-smooth`}
     >
       {/* --- MOBILE HAMBURGER BUTTON --- */}
       <button
@@ -73,7 +137,7 @@ const App = () => {
           </div>
 
           <nav className="space-y-6">
-            {["Home", "Profile", "Projects"].map((item) => (
+            {["Home", "Profile", "Certificates", "Projects"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -87,9 +151,7 @@ const App = () => {
           </nav>
         </div>
 
-        {/* --- DOWNLOAD CV & THEME TOGGLE --- */}
         <div className="space-y-4">
-          {/* NEW: Download CV Button */}
           <a
             href="Resume.pdf"
             download="Resume.pdf"
@@ -121,7 +183,7 @@ const App = () => {
       </aside>
 
       {/* --- MAIN CONTENT AREA --- */}
-      <main className="flex-1 lg:ml-72 p-6 md:p-16 scroll-smooth">
+      <main className="flex-1 lg:ml-72 p-6 md:p-16">
         {/* HERO SECTION */}
         <header id="home" className="min-h-[70vh] flex flex-col justify-center">
           <div className="flex flex-col md:flex-row items-center gap-10">
@@ -136,7 +198,7 @@ const App = () => {
             </div>
 
             <div>
-              <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter leading-none">
+              <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter leading-none hover:text-blue-600 transition-colors duration-300 cursor-default">
                 Rabadiya <br /> Manavkumar
               </h1>
               <p className="text-xl font-bold text-blue-600 uppercase tracking-widest opacity-80 mb-8">
@@ -145,20 +207,8 @@ const App = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+                    ✉️
                   </div>
                   <div>
                     <p className="text-[10px] font-black uppercase text-slate-400">
@@ -166,7 +216,7 @@ const App = () => {
                     </p>
                     <a
                       href="mailto:rabadiyamanav789@gmail.com"
-                      className="font-bold hover:text-blue-600 transition"
+                      className="font-bold hover:text-blue-600 transition-colors duration-300"
                     >
                       rabadiyamanav789@gmail.com
                     </a>
@@ -174,28 +224,16 @@ const App = () => {
                 </div>
 
                 <div className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+                    📞
                   </div>
                   <div>
                     <p className="text-[10px] font-black uppercase text-slate-400">
                       Contact Number
                     </p>
                     <a
-                      href="tel:8200833141"
-                      className="font-bold hover:text-blue-600 transition"
+                      href="tel:8200833181"
+                      className="font-bold hover:text-blue-600 transition-colors duration-300"
                     >
                       8200833181
                     </a>
@@ -290,6 +328,7 @@ const App = () => {
                 </div>
               </div>
 
+              {/* RESTORED SOCIAL BLOCKS */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div
                   className={`p-6 rounded-3xl border ${darkMode ? "bg-slate-800 border-slate-700" : "bg-white border-slate-100 shadow-lg"}`}
@@ -308,6 +347,7 @@ const App = () => {
                   <a
                     href="https://www.linkedin.com/in/manav-rabadiya-006a99350/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs font-black text-blue-600 hover:underline"
                   >
                     VIEW PROFILE ↗
@@ -337,6 +377,7 @@ const App = () => {
                   <a
                     href="https://github.com/manav-rabadiya23"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs font-black text-slate-900 border-b border-slate-900 pb-0.5 hover:text-blue-600 transition"
                   >
                     VISIT REPOS ↗
@@ -347,9 +388,46 @@ const App = () => {
           </div>
         </section>
 
+        {/* --- CERTIFICATES SECTION --- */}
+        <section
+          id="certificates"
+          className="py-20 border-t border-slate-200/20"
+        >
+          <div className="flex items-center gap-4 mb-12">
+            <h2 className="text-4xl font-black tracking-tight">
+              Certifications.
+            </h2>
+            <div className="h-[2px] flex-grow bg-slate-100/20"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                className={`p-6 rounded-[2rem] border transition-all hover:-translate-y-2 ${darkMode ? "bg-slate-800 border-slate-700 shadow-none" : "bg-white border-slate-100 shadow-lg"}`}
+              >
+                <div className="mb-4 text-blue-600 font-black text-[10px] uppercase tracking-widest">
+                  {cert.org}
+                </div>
+                <h3 className="font-bold text-lg mb-6 leading-tight h-12 overflow-hidden">
+                  {cert.title}
+                </h3>
+                <a
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center py-3 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-700 transition-all"
+                >
+                  View Certificate ↗
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-20 border-t border-slate-200/20">
-          <h2 className="text-4xl font-black mb-10 tracking-tight text-center lg:text-left">
+          <h2 className="text-4xl font-black mb-10 tracking-tight">
             Projects.
           </h2>
           <div className="p-16 border-2 border-dashed border-slate-200 rounded-[3rem] text-center opacity-30 font-black italic">
@@ -357,12 +435,13 @@ const App = () => {
           </div>
         </section>
 
-        <footer className="mt-40 py-10 border-t opacity-40 text-[10px] font-black uppercase tracking-widest flex flex-col md:flex-row justify-between items-center gap-4">
+        <footer className="mt-40 py-10 border-t opacity-40 text-[10px] font-black uppercase tracking-widest flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <span>© 2026 Rabadiya Manav</span>
           <div className="flex gap-6">
             <a
               href="https://www.instagram.com/_rabadiya_manav_23/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-600 transition"
             >
               Instagram
