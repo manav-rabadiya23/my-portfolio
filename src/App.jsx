@@ -443,16 +443,17 @@ const App = () => {
                 BCA Student @ CHARUSAT
               </span>
 
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-[1] tracking-tight mb-4 uppercase text-center lg:text-left">
+              {/* UPDATED: NAME HOVER EFFECT */}
+              <h1 className="group cursor-default text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-[1] tracking-tight mb-4 uppercase text-center lg:text-left">
                 <span
-                  className={`block ${
+                  className={`block transition-all duration-500 group-hover:text-[#1D4ED8] group-hover:translate-x-2 ${
                     darkMode ? "text-white" : "text-slate-900"
                   }`}
                 >
                   Rabadiya
                 </span>
                 <span
-                  className={`block ${
+                  className={`block transition-all duration-500 delay-75 group-hover:text-[#1D4ED8] group-hover:translate-x-4 ${
                     darkMode ? "text-white" : "text-slate-900"
                   }`}
                 >
@@ -464,11 +465,14 @@ const App = () => {
                 BCA Student @ CHARUSAT
               </p>
 
+              {/* UPDATED: CONTACT HOVER EFFECTS */}
               <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 lg:mb-12 max-w-xl mx-auto lg:mx-0">
-                <TouchCard className="rounded-2xl">
+                <TouchCard
+                  className={`group rounded-2xl transition-all duration-300 hover:-translate-y-1 ${darkMode ? "hover:bg-slate-900/50" : "hover:bg-white"}`}
+                >
                   <div className="flex items-center gap-3 sm:gap-4 text-left p-1">
                     <div
-                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border shadow-sm shrink-0 ${
+                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 ${
                         darkMode
                           ? "bg-slate-800 border-slate-700"
                           : "bg-white border-slate-100"
@@ -477,12 +481,12 @@ const App = () => {
                       <Mail className="w-5 h-5 text-[#1D4ED8]" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1">
+                      <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1 transition-colors group-hover:text-[#1D4ED8]">
                         Official Email
                       </p>
                       <TouchLink
                         href="mailto:rabadiyamanav789@gmail.com"
-                        className="text-sm sm:text-base font-black transition-colors text-[#1D4ED8] lg:text-inherit break-all"
+                        className="text-sm sm:text-base font-black transition-colors text-[#1D4ED8] lg:text-inherit group-hover:text-[#1D4ED8] break-all"
                       >
                         rabadiyamanav789@gmail.com
                       </TouchLink>
@@ -490,24 +494,26 @@ const App = () => {
                   </div>
                 </TouchCard>
 
-                <TouchCard className="rounded-2xl">
+                <TouchCard
+                  className={`group rounded-2xl transition-all duration-300 hover:-translate-y-1 ${darkMode ? "hover:bg-slate-900/50" : "hover:bg-white"}`}
+                >
                   <div className="flex items-center gap-3 sm:gap-4 text-left p-1">
                     <div
-                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border shadow-sm shrink-0 ${
+                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 ${
                         darkMode
                           ? "bg-slate-800 border-slate-700"
                           : "bg-white border-slate-100"
                       }`}
                     >
-                      <Phone className="w-5 h-5 text-pink-600" />
+                      <Phone className="w-5 h-5 text-[#1D4ED8]" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1">
+                      <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1 transition-colors group-hover:text-[#1D4ED8]">
                         Contact Number
                       </p>
                       <TouchLink
                         href="tel:8200833181"
-                        className="text-sm sm:text-base font-black transition-colors text-[#1D4ED8] lg:text-inherit"
+                        className="text-sm sm:text-base font-black transition-colors text-[#1D4ED8] lg:text-inherit group-hover:text-[#1D4ED8]"
                       >
                         8200833181
                       </TouchLink>
