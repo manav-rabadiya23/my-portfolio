@@ -888,42 +888,54 @@ const App = () => {
             <div className="h-[1px] flex-grow bg-blue-600/20"></div>
           </div>
 
-          <TouchCard
-            className={`p-8 sm:p-12 lg:p-20 border-2 border-dashed rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] text-center transition-colors lg:hover:scale-[1.01] ${
-              darkMode
-                ? "border-slate-700 bg-slate-900/70"
-                : "border-slate-200 bg-slate-50"
-            }`}
-          >
-            <div className="max-w-md mx-auto">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-[#1D4ED8] animate-floatY">
-                <Award className="w-7 h-7 sm:w-8 sm:h-8" />
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* PROJECT CARD */}
+            <TouchCard
+              className={`p-6 rounded-[2rem] border transition-all duration-300 lg:hover:-translate-y-2 lg:hover:scale-[1.02] ${
+                darkMode
+                  ? "bg-slate-900 border-slate-700 text-white"
+                  : "bg-white border-slate-100 text-slate-900 shadow-xl lg:hover:shadow-2xl"
+              }`}
+            >
+              <img
+                src="/watch-project.png"
+                alt="Watch Store"
+                className="w-full h-48 object-cover rounded-xl mb-5"
+              />
 
-              <h3
-                className={`text-xl sm:text-2xl font-black mb-4 uppercase tracking-tighter ${
-                  darkMode ? "text-slate-100" : "text-slate-900"
-                }`}
-              >
-                Projects Coming Soon
+              <h3 className="font-black text-lg mb-3 uppercase tracking-tight">
+                Watch Store Website
               </h3>
 
-              <p
-                className={`text-xs sm:text-sm font-bold mb-8 uppercase tracking-[0.2em] sm:tracking-widest leading-relaxed ${
-                  darkMode ? "text-slate-300" : "text-slate-500"
-                }`}
-              >
-                My digital works including college assignments and personal web
-                apps are currently being curated for display.
+              <p className="text-sm mb-5 leading-relaxed">
+                A modern and responsive watch store web application built with
+                React, Vite, and Firebase. It allows users to explore watch
+                collections with a clean UI and smooth user experience.
               </p>
 
-              <div className="flex justify-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-bounce"></span>
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-bounce [animation-delay:-0.15s]"></span>
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-bounce [animation-delay:-0.3s]"></span>
+              <p className="text-xs font-bold text-[#1D4ED8] mb-5 uppercase">
+                Tech: Firebase, Vite, React,Tailwind CSS
+              </p>
+
+              <div className="flex gap-3">
+                <TouchLink
+                  href="https://watch-store-three-ruddy.vercel.app/"
+                  target="_blank"
+                  className="flex-1 text-center py-2.5 bg-[#1D4ED8] text-white rounded-xl text-xs font-bold uppercase hover:bg-blue-700"
+                >
+                  🚀 Try Live
+                </TouchLink>
+
+                <TouchLink
+                  href="https://github.com/YOUR_USERNAME/YOUR_REPO"
+                  target="_blank"
+                  className="flex-1 text-center py-2.5 border border-[#1D4ED8] text-[#1D4ED8] rounded-xl text-xs font-bold uppercase hover:bg-[#1D4ED8] hover:text-white"
+                >
+                  💻 Code
+                </TouchLink>
               </div>
-            </div>
-          </TouchCard>
+            </TouchCard>
+          </div>
         </section>
 
         <footer
