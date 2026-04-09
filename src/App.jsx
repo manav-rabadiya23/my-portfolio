@@ -569,7 +569,7 @@ const App = () => {
                       },
                       { value: skills.length, label: "Skills" },
                       { value: learning.length, label: "Learning" },
-                      { value: "Soon", label: "Projects" },
+                      { value: "1", label: "Projects" },
                     ].map((item) => (
                       <TouchCard
                         key={item.label}
