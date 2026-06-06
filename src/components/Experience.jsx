@@ -1,54 +1,29 @@
 import { Award, Briefcase, CalendarDays, Check, Code2 } from "lucide-react";
+import { experience } from "../data/portfolioData";
 
-const experienceData = [
-  {
-    year: "2026",
-    status: "Current",
+const themeMap = {
+  yellow: {
+    text: "text-yellow-400",
+    border: "border-yellow-500/35",
+    bg: "bg-yellow-500/10",
+    glow: "shadow-yellow-500/20",
     icon: Briefcase,
-    tag: "Internship",
-    title: "AI-Powered Web Development",
-    company: "TechNova Solutions",
-    date: "2026 – Present",
-    points: [
-      "Working on modern responsive website sections and UI improvements.",
-      "Using React, TypeScript, Tailwind CSS and Framer Motion.",
-      "Collaborating with team and deploying projects using GitHub & Vercel.",
-    ],
-    skills: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "GitHub",
-      "Vercel",
-    ],
-    color: "yellow",
   },
-  {
-    year: "2026",
-    status: "Projects",
+  purple: {
+    text: "text-purple-400",
+    border: "border-purple-500/35",
+    bg: "bg-purple-500/10",
+    glow: "shadow-purple-500/20",
     icon: Code2,
-    tag: "Project",
-    title: "Personal Projects",
-    company: "Self Learning / Practice Work",
-    date: "2025 – 2026",
-    points: [
-      "Built portfolio, restaurant, watch store and business website interfaces.",
-      "Focused on clean UI, smooth animations and great user experience.",
-      "Integrated Firebase for auth, orders, bookings and feedback.",
-      "Deployed projects using Vercel and maintained on GitHub.",
-    ],
-    skills: [
-      "React",
-      "Firebase",
-      "Vercel",
-      "GitHub",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-    color: "purple",
   },
-];
+  cyan: {
+    text: "text-cyan-400",
+    border: "border-cyan-500/35",
+    bg: "bg-cyan-500/10",
+    glow: "shadow-cyan-500/20",
+    icon: Code2,
+  },
+};
 
 export default function Experience() {
   return (
@@ -85,34 +60,13 @@ export default function Experience() {
           <div className="absolute left-[34px] top-0 hidden h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-400 md:block" />
 
           <div className="space-y-6 sm:space-y-8">
-            {experienceData.map((item, index) => {
-              const Icon = item.icon;
-
-              const theme =
-                item.color === "purple"
-                  ? {
-                      text: "text-purple-400",
-                      border: "border-purple-500/35",
-                      bg: "bg-purple-500/10",
-                      glow: "shadow-purple-500/20",
-                    }
-                  : item.color === "yellow"
-                    ? {
-                        text: "text-yellow-400",
-                        border: "border-yellow-500/35",
-                        bg: "bg-yellow-500/10",
-                        glow: "shadow-yellow-500/20",
-                      }
-                    : {
-                        text: "text-cyan-400",
-                        border: "border-cyan-500/35",
-                        bg: "bg-cyan-500/10",
-                        glow: "shadow-cyan-500/20",
-                      };
+            {experience.map((item, index) => {
+              const theme = themeMap[item.color] || themeMap.cyan;
+              const Icon = theme.icon;
 
               return (
                 <div
-                  key={index}
+                  key={`${item.title}-${index}`}
                   className="grid gap-5 md:grid-cols-[120px_1fr] md:gap-8 lg:grid-cols-[140px_1fr]"
                 >
                   <div className="relative hidden md:block">
@@ -155,9 +109,9 @@ export default function Experience() {
                     </div>
 
                     <ul className="space-y-3">
-                      {item.points.map((point, i) => (
+                      {item.points.map((point) => (
                         <li
-                          key={i}
+                          key={point}
                           className="flex gap-3 text-sm leading-7 text-slate-300 sm:text-base"
                         >
                           <Check
@@ -180,7 +134,7 @@ export default function Experience() {
                       ))}
                     </div>
 
-                    {item.tag === "Internship" && (
+                    {item.certificate && (
                       <div className="mt-6 rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-5">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                           <div className="flex items-start gap-4">
@@ -190,18 +144,17 @@ export default function Experience() {
 
                             <div>
                               <h4 className="text-base font-black text-yellow-400 sm:text-lg">
-                                Internship Completion Certificate
+                                {item.certificate.title}
                               </h4>
 
                               <p className="mt-2 text-sm leading-6 text-slate-300">
-                                Successfully completed AI-Powered Web
-                                Development Internship at TechNova Solutions.
+                                {item.certificate.description}
                               </p>
                             </div>
                           </div>
 
                           <a
-                            href="/tns-certi.png"
+                            href={item.certificate.file}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex shrink-0 items-center justify-center rounded-xl bg-yellow-500 px-5 py-3 text-xs font-black uppercase tracking-wider text-black transition hover:bg-yellow-400"

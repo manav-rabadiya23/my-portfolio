@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Certificates from "./components/Certificates";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ManavOS from "./components/ManavOS";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -22,6 +23,7 @@ export default function App() {
         <Projects />
         <Contact />
         <Footer />
+        <ManavOS />
       </main>
     </div>
   );

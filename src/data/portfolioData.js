@@ -65,33 +65,61 @@ export const profileDetails = [
 
 export const experience = [
   {
-    title: "Frontend Development Intern",
+    year: "2026",
+    status: "Current",
+    tag: "Internship",
+    title: "AI-Powered Web Development",
     company: "TechNova Solutions",
-    period: "Current / Recent",
-    type: "Internship",
+    date: "2026 – Present",
     description:
-      "Worked on modern responsive website sections, dark/light mode, mobile layouts, internship pages, team sections and UI improvements using React, TypeScript, Tailwind CSS and Framer Motion.",
+      "Working on modern responsive website sections, UI improvements and deployment workflows.",
     points: [
-      "Built responsive sections for company website pages.",
-      "Improved UI/UX, spacing, dark mode and mobile experience.",
-      "Worked with GitHub, Vercel deployment and real project updates.",
+      "Working on modern responsive website sections and UI improvements.",
+      "Using React, TypeScript, Tailwind CSS and Framer Motion.",
+      "Collaborating with team and deploying projects using GitHub & Vercel.",
     ],
+    skills: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "GitHub",
+      "Vercel",
+    ],
+    color: "yellow",
+    certificate: {
+      title: "Internship Completion Certificate",
+      description:
+        "Successfully completed AI-Powered Web Development Internship at TechNova Solutions.",
+      file: "/tns-certi.png",
+    },
   },
   {
-    title: "Personal & Client-side Web Projects",
+    year: "2026",
+    status: "Projects",
+    tag: "Project",
+    title: "Personal Projects",
     company: "Self Learning / Practice Work",
-    period: "2025 - 2026",
-    type: "Working Data",
+    date: "2025 – 2026",
     description:
-      "Created portfolio, restaurant, watch store and business website interfaces with focus on attractive UI, smooth animations and practical user flows.",
+      "Created portfolio, restaurant, watch store and business website interfaces with focus on clean UI, smooth animations and practical user flows.",
     points: [
-      "Designed reusable React components and clean section layouts.",
-      "Connected Firebase for auth, orders, bookings and feedback in projects.",
-      "Practiced production deployment using Vercel and GitHub.",
+      "Built portfolio, restaurant, watch store and business website interfaces.",
+      "Focused on clean UI, smooth animations and great user experience.",
+      "Integrated Firebase for auth, orders, bookings and feedback.",
+      "Deployed projects using Vercel and maintained on GitHub.",
     ],
+    skills: [
+      "React",
+      "Firebase",
+      "Vercel",
+      "GitHub",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    color: "purple",
   },
 ];
-
 export const projects = [
   {
     title: "Gujarati Rasoi Restaurant Website",
@@ -101,7 +129,28 @@ export const projects = [
     tech: "React • Tailwind CSS • Firebase • Vercel",
     live: "https://restaurant-tau-brown.vercel.app/",
     code: "https://github.com/manav-rabadiya23",
+
+    type: "Restaurant Management System",
+
+    overview:
+      "A complete restaurant management website with customer and admin functionality. Users can browse menus, place orders, book tables, submit feedback and manage profiles. Admins can manage orders, menu items and customers.",
+
+    features: [
+      "Menu & Category System",
+      "Cart & Checkout Flow",
+      "Table Booking System",
+      "User Profile Section",
+      "Feedback System",
+      "Admin Dashboard",
+    ],
+
+    highlights: [
+      "Built complete customer journey flow",
+      "Integrated Firebase database",
+      "Fully responsive on all devices",
+    ],
   },
+
   {
     title: "Watch Store Website",
     image: "/watch-project.png",
@@ -110,7 +159,26 @@ export const projects = [
     tech: "React • Vite • Tailwind CSS",
     live: "https://watch-store-three-ruddy.vercel.app/",
     code: "https://github.com/manav-rabadiya23",
+
+    type: "E-Commerce UI Project",
+
+    overview:
+      "A premium watch showcase website focused on elegant product presentation, responsive layouts and smooth browsing experience.",
+
+    features: [
+      "Premium Product Cards",
+      "Modern Landing Page",
+      "Responsive Layout",
+      "Clean Product Showcase",
+    ],
+
+    highlights: [
+      "Focused on premium design aesthetics",
+      "Improved mobile shopping experience",
+      "Created reusable UI components",
+    ],
   },
+
   {
     title: "Personal Portfolio Website",
     image: "/profilepic.jpeg",
@@ -119,6 +187,24 @@ export const projects = [
     tech: "React • Tailwind CSS • Lucide Icons",
     live: "#home",
     code: "https://github.com/manav-rabadiya23",
+
+    type: "Personal Branding Website",
+
+    overview:
+      "A personal portfolio designed to present skills, projects, certificates and experience in a professional and interactive way.",
+
+    features: [
+      "Interactive Hero Section",
+      "Project Showcase",
+      "Certificate Gallery",
+      "Contact Integration",
+    ],
+
+    highlights: [
+      "Custom UI design",
+      "Fully responsive layout",
+      "Modern animations and effects",
+    ],
   },
 ];
 
