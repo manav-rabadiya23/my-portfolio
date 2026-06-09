@@ -14,7 +14,7 @@ export const personalInfo = {
   whatsappNumber: "918200833181",
   languages: "Gujarati, Hindi, English",
   resume: "/Resume.pdf",
-  profileImage: "/t.png",
+  profileImage: "/manav-developer.png",
   linkedin: "https://linkedin.com/in/manav-rabadiya-006a99350/",
   github: "https://github.com/manav-rabadiya23",
   instagram: "https://instagram.com/_rabadiya_manav_23/",
