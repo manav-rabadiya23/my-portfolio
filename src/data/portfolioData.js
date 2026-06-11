@@ -1,23 +1,6 @@
 export const personalInfo = {
-  firstName: "Rabadiya",
-  lastName: "Manavkumar",
   fullName: "Rabadiya Manavkumar Navinbhai",
-  role: "Frontend Developer • React Learner • BCA Student",
-  tagline:
-    "I build clean, responsive and modern web interfaces using React, Tailwind CSS, JavaScript and Firebase.",
-  university: "CHARUSAT - CMPICA",
-  course: "BCA Student",
-  semester: "Semester 4",
-  location: "Vadodara, Gujarat",
-  email: "rabadiyamanav789@gmail.com",
-  phone: "8200833181",
-  whatsappNumber: "918200833181",
-  languages: "Gujarati, Hindi, English",
-  resume: "/Resume.pdf",
-  profileImage: "/manav-developer.png",
-  linkedin: "https://linkedin.com/in/manav-rabadiya-006a99350/",
-  github: "https://github.com/manav-rabadiya23",
-  instagram: "https://instagram.com/_rabadiya_manav_23/",
+  profileImage: "/profile.png",
 };
 
 export const navItems = [
@@ -65,6 +48,24 @@ export const profileDetails = [
 
 export const experience = [
   {
+    year: "2025",
+    status: "Learning",
+    tag: "Beginning",
+    title: "Frontend Development Journey",
+    company: "Self Learning",
+    date: "2025",
+    description:
+      "Started learning web development and building frontend interfaces.",
+    points: [
+      "Learned HTML, CSS and JavaScript fundamentals.",
+      "Explored responsive web design principles.",
+      "Started building small frontend projects.",
+    ],
+    skills: ["HTML", "CSS", "JavaScript", "GitHub"],
+    color: "cyan",
+  },
+
+  {
     year: "2026",
     status: "Current",
     tag: "Internship",
@@ -87,6 +88,7 @@ export const experience = [
       "Vercel",
     ],
     color: "yellow",
+
     certificate: {
       title: "Internship Completion Certificate",
       description:
@@ -94,30 +96,36 @@ export const experience = [
       file: "/tns-certi.png",
     },
   },
+
   {
     year: "2026",
-    status: "Projects",
-    tag: "Project",
-    title: "Personal Projects",
-    company: "Self Learning / Practice Work",
-    date: "2025 – 2026",
+    status: "Verified",
+    tag: "Experience Letter",
+    title: "Professional Experience Letter",
+    company: "TechNova Solutions",
+    date: "10 June 2026",
     description:
-      "Created portfolio, restaurant, watch store and business website interfaces with focus on clean UI, smooth animations and practical user flows.",
+      "Official experience letter issued by TechNova Solutions recognizing contributions as a Web Developer.",
     points: [
-      "Built portfolio, restaurant, watch store and business website interfaces.",
-      "Focused on clean UI, smooth animations and great user experience.",
-      "Integrated Firebase for auth, orders, bookings and feedback.",
-      "Deployed projects using Vercel and maintained on GitHub.",
+      "Worked on website development projects.",
+      "Contributed to frontend and backend implementation.",
+      "Performed debugging and maintenance tasks.",
+      "Demonstrated professionalism and technical skills.",
     ],
     skills: [
-      "React",
-      "Firebase",
-      "Vercel",
-      "GitHub",
-      "Tailwind CSS",
-      "Framer Motion",
+      "Web Development",
+      "Frontend",
+      "Backend Basics",
+      "Debugging",
+      "Maintenance",
     ],
-    color: "purple",
+    color: "green",
+
+    lor: {
+      title: "Experience Letter",
+      description: "Official experience letter issued by TechNova Solutions.",
+      file: "/Manav@TNS-LOR.pdf",
+    },
   },
 ];
 export const projects = [
@@ -181,7 +189,7 @@ export const projects = [
 
   {
     title: "Personal Portfolio Website",
-    image: "/profilepic.jpeg",
+    image: "/profile.png",
     description:
       "A responsive personal portfolio to showcase skills, certificates, projects, internship data and contact details.",
     tech: "React • Tailwind CSS • Lucide Icons",

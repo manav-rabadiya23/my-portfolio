@@ -1,6 +1,5 @@
 import { Award, Briefcase, CalendarDays, Check, Code2 } from "lucide-react";
 import { experience } from "../data/portfolioData";
-
 const themeMap = {
   yellow: {
     text: "text-yellow-400",
@@ -9,18 +8,28 @@ const themeMap = {
     glow: "shadow-yellow-500/20",
     icon: Briefcase,
   },
-  purple: {
-    text: "text-purple-400",
-    border: "border-purple-500/35",
-    bg: "bg-purple-500/10",
-    glow: "shadow-purple-500/20",
-    icon: Code2,
-  },
+
   cyan: {
     text: "text-cyan-400",
     border: "border-cyan-500/35",
     bg: "bg-cyan-500/10",
     glow: "shadow-cyan-500/20",
+    icon: Code2,
+  },
+
+  green: {
+    text: "text-emerald-400",
+    border: "border-emerald-500/35",
+    bg: "bg-emerald-500/10",
+    glow: "shadow-emerald-500/20",
+    icon: Award,
+  },
+
+  purple: {
+    text: "text-purple-400",
+    border: "border-purple-500/35",
+    bg: "bg-purple-500/10",
+    glow: "shadow-purple-500/20",
     icon: Code2,
   },
 };
@@ -160,6 +169,36 @@ export default function Experience() {
                             className="flex shrink-0 items-center justify-center rounded-xl bg-yellow-500 px-5 py-3 text-xs font-black uppercase tracking-wider text-black transition hover:bg-yellow-400"
                           >
                             View Certificate
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                    {item.lor && (
+                      <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="flex items-start gap-4">
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400">
+                              <Award className="h-6 w-6" />
+                            </div>
+
+                            <div>
+                              <h4 className="text-base font-black text-emerald-400 sm:text-lg">
+                                {item.lor.title}
+                              </h4>
+
+                              <p className="mt-2 text-sm leading-6 text-slate-300">
+                                {item.lor.description}
+                              </p>
+                            </div>
+                          </div>
+
+                          <a
+                            href={item.lor.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex shrink-0 items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-xs font-black uppercase tracking-wider text-black transition hover:bg-emerald-400"
+                          >
+                            View Letter
                           </a>
                         </div>
                       </div>
