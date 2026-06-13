@@ -1,6 +1,23 @@
 export const personalInfo = {
+  firstName: "Rabadiya",
+  lastName: "Manavkumar",
   fullName: "Rabadiya Manavkumar Navinbhai",
-  profileImage: "/profile.png",
+  role: "Frontend Developer • React Learner • BCA Student",
+  tagline:
+    "I build clean, responsive and modern web interfaces using React, Tailwind CSS, JavaScript and Firebase.",
+  university: "CHARUSAT - CMPICA",
+  course: "BCA Student",
+  semester: "Semester 4",
+  location: "Vadodara, Gujarat",
+  email: "rabadiyamanav789@gmail.com",
+  phone: "8200833181",
+  whatsappNumber: "918200833181",
+  languages: "Gujarati, Hindi, English",
+  resume: "/Resume.pdf",
+  profileImage: "profile.png",
+  linkedin: "https://linkedin.com/in/manav-rabadiya-006a99350/",
+  github: "https://github.com/manav-rabadiya23",
+  instagram: "https://instagram.com/_rabadiya_manav_23/",
 };
 
 export const navItems = [
